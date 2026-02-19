@@ -1,0 +1,12 @@
+body {
+    font-family:  monospace, Tahoma, "Helvetica Neue", Montserrat, Arial, "Open Sans",  sans-serif;
+}
+span{
+    color: #070303;
+}
+h2{
+    color: #090a41;
+}
+h2::first-letter{
+    color: #248126;
+}
