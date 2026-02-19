@@ -1,6 +1,9 @@
 body {
   font-family: Montserrat, Arial,  "Open Sans", Tahoma, "Helvetica Neue", sans-serif;
 }
+span{
+  color: #d30808;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -29,7 +32,22 @@ body {
     transform: rotate(360deg);
   }
 }
+h1{
 
+}
+.header__counter_main{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+}
+.header__counter_title{
+  display: flex;
+  align-items: center;
+  font-size: 56px;
+  color: #e10000;
+}
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
