@@ -9,6 +9,12 @@ function App() {
             <h1>Try Programmer</h1>
             <Header/>
             <h1>Try Programmer</h1>
+            <div>
+               <h1>Counter: {count}</h1>
+               <button onClick={() => setCount(count + 1)}>
+                   +
+               </button>
+            </div>
 
           </div>
           )
