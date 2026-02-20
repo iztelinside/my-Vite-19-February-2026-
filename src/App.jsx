@@ -6,6 +6,22 @@ function App() {
     const [users, setUsers] = useState([])
     const [selectedUser, setSelectedUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [newName, setNewName] = useState("")
+    const [newEmail, setNewEmail] = useState("")
+    const createUser = () => {
+        if (!newName.trim() || !newEmail.trim()) return
+        const newUser = {
+            id: Date.now(),
+            name: newName,
+            email: newEmail
+        }
+
+
+        setUsers(prev => [...prev, newUser])
+            setNewName("")
+            setNewEmail("")
+    }
+
 
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
@@ -15,6 +31,19 @@ function App() {
                 setLoading(false)
             })
     }, [])
+    // const createUser = () => {
+    //     if (!newName.trim() || !newEmail.trim()) return
+    //
+    //     const newUser = {
+    //         id: Date.now(),
+    //         name: newName,
+    //         email: newEmail
+    //     }
+    //
+    //     setUsers(prev => [...prev, newUser])
+    //     setNewName("")
+    //     setNewEmail("")
+    // }
 
     const deleteUser = (id) => {
         setUsers(prev => prev.filter(user => user.id !== id))
@@ -41,6 +70,17 @@ function App() {
                 onDelete={deleteUser}
                 onSelect={selectUser}
             />
+            <input
+                type="text"
+                value={newName}
+                onChange={(e) => setNewName(e.target.value)}
+            />
+            <input
+                type="text"
+                value={newEmail}
+                onChange={(e) => setNewEmail(e.target.value)}
+            />
+            <button onClick={createUser}>Add</button>
         </div>
     )
 }
