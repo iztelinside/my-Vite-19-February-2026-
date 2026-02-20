@@ -1,6 +1,6 @@
 import UserItem from "../UserItem/UserItem.jsx";
 
-function UserList({ users, onDelete, onSelect }) {
+function UserList({ users, onDelete, onSelect, onEdit }) {
     return (
         <ul>
             {users.map(user => (
@@ -9,6 +9,7 @@ function UserList({ users, onDelete, onSelect }) {
                     user={user}
                     onDelete={onDelete}
                     onSelect={onSelect}
+                    onEdit={onEdit} // передаём onEdit в UserItem
                 />
             ))}
         </ul>
@@ -16,6 +17,25 @@ function UserList({ users, onDelete, onSelect }) {
 }
 
 export default UserList;
+
+// import UserItem from "../UserItem/UserItem.jsx";
+//
+// function UserList({ users, onDelete, onSelect }) {
+//     return (
+//         <ul>
+//             {users.map(user => (
+//                 <UserItem
+//                     key={user.id}
+//                     user={user}
+//                     onDelete={onDelete}
+//                     onSelect={onSelect}
+//                 />
+//             ))}
+//         </ul>
+//     );
+// }
+//
+// export default UserList;
 
 // import UserItem from "../UserItem/UserItem.jsx"
 //
