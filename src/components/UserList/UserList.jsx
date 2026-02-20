@@ -1,4 +1,4 @@
-import UserItem from "./UserItem"
+import UserItem from "../UserItem/UserItem.jsx"
 
 function UserList({ users, onDelete, onSelect }) {
     return (

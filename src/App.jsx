@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import UserList from "./components/UserList"
-import SelectedUserCard from "./components/SelectedUserCard"
+import UserList from "./components/UserList/UserList.jsx"
+import SelectedUserCard from "./components/SelectedUserCard/SelectedUserCard.jsx"
 
 function App() {
     const [users, setUsers] = useState([])
